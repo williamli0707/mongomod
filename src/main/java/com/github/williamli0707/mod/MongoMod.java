@@ -67,7 +67,7 @@ public class MongoMod {
 
 	public MongoMod() throws IOException {
 //		Scanner in = new Scanner(new File("Config.txt"));
-		MongoClient mongoClient = MongoClients.create("mongodb+srv://mongomod:FzT7L7KlDwGfSuMn@cluster0.hix0z.mongodb.net/?retryWrites=true&w=majority");
+		MongoClient mongoClient = MongoClients.create("mongodb+srv://mongomod:<>@cluster0.hix0z.mongodb.net/?retryWrites=true&w=majority");
 		MongoDatabase db = mongoClient.getDatabase("lermit4");
 		joinLogs = db.getCollection("joinlogs");
 		startLogs = db.getCollection("startlogs");
@@ -88,7 +88,7 @@ public class MongoMod {
 
 		// Register ourselves for server and other game events we are interested in
 		MinecraftForge.EVENT_BUS.register(this);
-		
+
 		//getting the most recent player log:
 		//Document myDoc = collection.find().sort(new Document("_id", -1)).first();
 	}
